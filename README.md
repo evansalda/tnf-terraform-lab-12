@@ -4,7 +4,7 @@ Vous allez à présent utiliser des workspaces pour gérer les environnements de
 
 - Supprimez vos environnements de **développement** et de **recette**
 
-- Supprimez (si présents) tout fichier de contenant la configuration partielle de votre backend
+- Supprimez (si présents) tout fichier contenant la configuration partielle de votre backend
 
 - Dans le fichier **backend.tf**, configurez votre backend à l'aide des paramètres *bucket*, *key*, *region*, *profile* et **workspace_key_prefix** :
 
@@ -20,18 +20,16 @@ Vous allez à présent utiliser des workspaces pour gérer les environnements de
     - recette
     - production
 
-- Positionnez-vous dans le workspace nommé **developpement** et créez l'environnement de développement.
-
-- De la même manière (en utilisant le bon workspace et le bon fichier .tfvars), crééez l'environnement de recette.
+- Créez les environnements de **developpement** et **recette** en utilisant les workspaces précédemment créés pour y stocker leur tftate
 
 - Crééz le fichier production.tfvars, en sachant que :
 
     - Le serveur web est de type t2.large
     - La variable **environnement** a pour valeur **prd**
 
-- Positionnez-vous dans le workspace nommé **production** et créez l'environnement de production.
+- Créez l'environnement de **production** en utilisant le workspace du même nom pour stocker le tfstate.
 
-Connectez-vous à la [console AWS](https://689995499512.signin.aws.amazon.com/console), ouvrez le bucket S3 **nuumfactory-backend** et confirmez que terraform a stocké vos tfstates de la manière suivante :
+Connectez-vous à la [console AWS](https://645860290752.signin.aws.amazon.com/console), ouvrez le bucket S3 **nuumfactory-backend** et confirmez que terraform a stocké vos tfstates de la manière suivante :
 
 ```
 <digit>
